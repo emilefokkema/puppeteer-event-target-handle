@@ -1,0 +1,31 @@
+{
+  "name": "puppeteer-js-event-target-handle",
+  "version": "0.0.1",
+  "description": "Make DOM events available to Puppeteer",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emilefokkema/puppeteer-js-event-target-handle.git"
+  },
+  "keywords": [
+    "puppeteer",
+    "events"
+  ],
+  "author": "Emile Fokkema",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/emilefokkema/puppeteer-js-event-target-handle/issues"
+  },
+  "homepage": "https://github.com/emilefokkema/puppeteer-js-event-target-handle#readme",
+  "devDependencies": {
+    "@types/node": "^22.10.5",
+    "puppeteer": "^23.11.1",
+    "typescript": "^5.7.3"
+  },
+  "peerDependencies": {
+    "puppeteer": ">22"
+  }
+}
