@@ -5,9 +5,9 @@
         "target": "ESNext",
         "composite": true,
         "outDir": "./dist",
-        "emitDeclarationOnly": true,
-        "types": ["node"],
-        "lib": ["ESNext"]
+        "emitDeclarationOnly": true
     },
-    "include": ["src/**/*"]
+    "include": [
+        "**/*"
+    ]
 }
