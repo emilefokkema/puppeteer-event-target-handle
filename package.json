@@ -4,7 +4,8 @@
   "description": "Make DOM events available to Puppeteer",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "check-types": "tsc --build"
   },
   "repository": {
     "type": "git",
