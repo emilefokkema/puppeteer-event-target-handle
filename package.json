@@ -1,5 +1,5 @@
 {
-  "name": "puppeteer-js-event-target-handle",
+  "name": "puppeteer-event-target-handle",
   "version": "0.0.1",
   "description": "Make DOM events available to Puppeteer",
   "main": "index.js",

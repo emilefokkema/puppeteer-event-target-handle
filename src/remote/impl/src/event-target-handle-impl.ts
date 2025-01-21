@@ -1,7 +1,7 @@
 import type { EventTargetLike } from '../../../shared/event-target-like';
 import type { EventMessage } from '../../../shared/messages';
 import type { ChartMap, SerializablePropertyChart } from '../../../shared/serializable-types';
-import type { JSEventTargetHandle } from '../../api/js-event-target-handle';
+import type { EventTargetHandle } from '../../api/event-target-handle';
 import type { Connection } from './connection';
 import type { MessageTarget } from './message-target';
 import { serializeEvent } from './serialize-event';
@@ -41,7 +41,7 @@ class TargetEventListener<TMap, TType extends keyof TMap>{
 
 type ListenerMap<TMap> = {[type in keyof TMap]?: TargetEventListener<TMap, type>}
 
-export class EventTargetHandleImpl<TMap> implements JSEventTargetHandle<TMap>{
+export class EventTargetHandleImpl<TMap> implements EventTargetHandle<TMap>{
     private readonly listenerMap: ListenerMap<TMap> = {};
     public constructor(
         private readonly connection: Connection,

@@ -12,8 +12,8 @@ export type ExtendedSerializedMap<
             : never
     }
 
-export interface JSEventTargetHandle<TMap, TSerializedMap = {}> extends EventTargetLike<Pick<TSerializedMap, keyof TMap & keyof TSerializedMap>> {
-    emitEvents<TChartMap extends ChartMap<TMap>>(map: TChartMap): Promise<JSEventTargetHandle<TMap, ExtendedSerializedMap<TMap, TSerializedMap, TChartMap>>>
+export interface EventTargetHandle<TMap, TSerializedMap = {}> extends EventTargetLike<Pick<TSerializedMap, keyof TMap & keyof TSerializedMap>> {
+    emitEvents<TChartMap extends ChartMap<TMap>>(map: TChartMap): Promise<EventTargetHandle<TMap, ExtendedSerializedMap<TMap, TSerializedMap, TChartMap>>>
     handleEvents<TType extends (keyof TMap & keyof TSerializedMap)>(
         type: TType,
         addHandler: (handlerAdder: (handler: (e: TMap[TType]) => void) => void) => void
