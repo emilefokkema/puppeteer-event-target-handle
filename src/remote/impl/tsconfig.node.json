@@ -1,0 +1,20 @@
+{
+    "extends": "../../../../tsconfig.node.json",
+    "compilerOptions": {
+        "outDir": "dist-types",
+        "module": "ESNext",
+        "moduleResolution": "Bundler",
+        "types": ["node"],
+        "target": "ESNext",
+        "composite": true,
+        "emitDeclarationOnly": true
+    },
+    "include": [
+        "**/*",
+    ],
+    "exclude": [
+        "src/**/*",
+        "dist/**/*",
+        "dist-types/**/*"
+    ]
+}

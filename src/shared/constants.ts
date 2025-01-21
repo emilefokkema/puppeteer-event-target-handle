@@ -1,0 +1,1 @@
+export const sendEventFunctionName = 'runtimeEventTargetSendEvent' as const

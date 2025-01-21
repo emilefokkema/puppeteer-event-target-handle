@@ -1,0 +1,28 @@
+{
+    "compilerOptions": {
+        "module": "ESNext",
+        "moduleResolution": "Bundler",
+        "types": [],
+        "target": "ESNext",
+        "composite": true,
+        "emitDeclarationOnly": true,
+        "outDir": "dist-types",
+        "skipLibCheck": true,
+        "esModuleInterop": true,
+        "verbatimModuleSyntax": true,
+        "noImplicitThis": true,
+        "strict": true,
+        "lib": [
+            "ES2020",
+            "DOM",
+            "DOM.Iterable"
+        ],
+    },
+    "references": [
+        {"path": "../api"},
+        {"path": "../../shared"}
+    ],
+    "include": [
+        "src/**/*"
+    ]
+}
