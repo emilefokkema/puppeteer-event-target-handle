@@ -1,4 +1,4 @@
-import { EventMessage } from "../../shared/messages";
+import { EventMessage } from "../../../shared/messages";
 import { EventSource } from './events/event-source';
 
 export class TargetEventListener<TSerializedEvent, TType extends keyof any>{

@@ -1,19 +1,7 @@
 {
-    "compilerOptions": {
-        "module": "ESNext",
-        "moduleResolution": "bundler",
-        "target": "ESNext",
-        "composite": true,
-        "outDir": "./dist",
-        "emitDeclarationOnly": true
-    },
+    "files": [],
     "references": [
-        {"path": "../../shared"},
-        {"path": "../../remote/api"},
-        {"path": "../api"}
-    ],
-    "include": [
-        "**/*"
-    ],
-    "exclude": ["dist"]
+        {"path": "./tsconfig.src.json"},
+        {"path": "./tsconfig.dev.json"}
+    ]
 }

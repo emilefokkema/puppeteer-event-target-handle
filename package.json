@@ -6,7 +6,8 @@
   "types": "./dist/types/local/api/index.d.ts",
   "exports": {
     ".": {
-      "types": "./dist/types/local/api/index.d.ts"
+      "types": "./dist/types/local/api/index.d.ts",
+      "import": "./dist/index.mjs"
     }
   },
   "files": [
@@ -17,7 +18,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "check-types": "tsc --build",
     "remote:build": "vite build --config src/remote/impl/vite.config.ts",
-    "types:build": "tsc --project src/tsconfig.build.json"
+    "types:build": "tsc --project src/tsconfig.build.json",
+    "local:build": "vite build --config src/local/impl/vite.config.ts",
+    "build": "pnpm remote:build && pnpm types:build && pnpm local:build"
   },
   "repository": {
     "type": "git",

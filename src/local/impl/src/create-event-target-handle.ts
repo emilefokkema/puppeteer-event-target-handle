@@ -1,11 +1,11 @@
 import { JSHandle } from 'puppeteer'
-import { EventTargetLike } from '../../shared/event-target-like'
-import { EventTargetHandle } from '../api/event-target-handle'
-import { EventTargetHandleFactory } from '../../remote/api/event-target-handle-factory'
+import { EventTargetLike } from '../../../shared/event-target-like'
+import { EventTargetHandle } from '../../api/event-target-handle'
+import { EventTargetHandleFactory } from '../../../remote/api/event-target-handle-factory'
 import { ConnectionDataRepository } from './connection-data-repository'
 
 import { EventSource } from './events/event-source'
-import { ConnectionEventMessage } from '../../shared/messages'
+import { ConnectionEventMessage } from '../../../shared/messages'
 import { ExposedFunctionConnection } from './exposed-function-connection'
 import { EventTargetHandleImpl } from './event-target-handle-impl'
 

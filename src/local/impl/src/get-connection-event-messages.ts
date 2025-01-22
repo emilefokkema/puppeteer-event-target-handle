@@ -1,7 +1,7 @@
 import { Page } from "puppeteer";
-import { ConnectionEventMessage } from "../../shared/messages";
+import { ConnectionEventMessage } from "../../../shared/messages";
 import { EventSource } from "./events/event-source";
-import { sendEventFunctionName } from "../../shared/constants";
+import { sendEventFunctionName } from "../../../shared/constants";
 
 export async function getConnectionEventMessages(page: Page): Promise<EventSource<ConnectionEventMessage>> {
     const listeners: ((e: ConnectionEventMessage) => void)[] = [];

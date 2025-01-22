@@ -1,4 +1,4 @@
-import { ConnectionData } from "../../shared/connection-data";
+import { ConnectionData } from "../../../shared/connection-data";
 import { ConnectionDataRepository } from "./connection-data-repository";
 
 export function createConnectionDataRepository(): ConnectionDataRepository{

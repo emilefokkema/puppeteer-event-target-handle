@@ -1,5 +1,5 @@
-import { ConnectionData } from '../../shared/connection-data';
-import { ConnectionEventMessage, EventMessage } from '../../shared/messages';
+import { ConnectionData } from '../../../shared/connection-data';
+import { ConnectionEventMessage, EventMessage } from '../../../shared/messages';
 import { Connection } from './connection'
 import { EventSource } from './events/event-source'
 import { map } from './events/map';
