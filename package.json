@@ -15,7 +15,7 @@
   ],
   "private": false,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "vitest --run",
     "check-types": "tsc --build",
     "remote:build": "vite build --config src/remote/impl/vite.config.ts",
     "types:build": "tsc --project src/tsconfig.build.json",
@@ -40,7 +40,8 @@
     "@types/node": "^22.10.5",
     "puppeteer": "^23.11.1",
     "typescript": "^5.7.3",
-    "vite": "^6.0.11"
+    "vite": "^6.0.11",
+    "vitest": "^3.0.3"
   },
   "peerDependencies": {
     "puppeteer": ">22"

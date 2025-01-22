@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+        "module": "ESNext",
+        "moduleResolution": "Bundler",
+        "types": ["node"],
+        "target": "ESNext",
+        "composite": true,
+        "emitDeclarationOnly": true,
+        "outDir": "dist-dev"
+    },
+    "files": [
+        "vitest.config.ts"
+    ]
+}
