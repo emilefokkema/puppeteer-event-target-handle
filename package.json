@@ -3,10 +3,21 @@
   "version": "0.0.1",
   "description": "Make DOM events available to Puppeteer",
   "main": "index.js",
+  "types": "./dist/types/local/api/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/types/local/api/index.d.ts"
+    }
+  },
+  "files": [
+    "dist/**/*"
+  ],
+  "private": false,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "check-types": "tsc --build",
-    "remote:build": "vite build --config src/remote/impl/vite.config.ts"
+    "remote:build": "vite build --config src/remote/impl/vite.config.ts",
+    "types:build": "tsc --project src/tsconfig.build.json"
   },
   "repository": {
     "type": "git",

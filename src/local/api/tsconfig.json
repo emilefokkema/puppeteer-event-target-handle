@@ -1,11 +1,9 @@
 {
+    "extends": "../../tsconfig.build.json",
     "compilerOptions": {
-        "module": "ESNext",
-        "moduleResolution": "bundler",
-        "target": "ESNext",
-        "composite": true,
+        "rootDir": ".",
         "outDir": "./dist",
-        "emitDeclarationOnly": true
+        "composite": true
     },
     "references": [
         {"path": "../../shared"},
@@ -13,5 +11,6 @@
     ],
     "include": [
         "**/*"
-    ]
+    ],
+    "exclude": ["dist"]
 }
