@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/emilefokkema/puppeteer-js-event-target-handle.git"
+    "url": "git+https://github.com/emilefokkema/puppeteer-event-target-handle.git"
   },
   "keywords": [
     "puppeteer",
@@ -18,9 +18,9 @@
   "author": "Emile Fokkema",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/emilefokkema/puppeteer-js-event-target-handle/issues"
+    "url": "https://github.com/emilefokkema/puppeteer-event-target-handle/issues"
   },
-  "homepage": "https://github.com/emilefokkema/puppeteer-js-event-target-handle#readme",
+  "homepage": "https://github.com/emilefokkema/puppeteer-event-target-handle#readme",
   "devDependencies": {
     "@types/node": "^22.10.5",
     "puppeteer": "^23.11.1",
