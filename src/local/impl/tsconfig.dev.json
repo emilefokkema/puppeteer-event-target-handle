@@ -3,6 +3,9 @@
     "compilerOptions": {
         "outDir": "dist",
     },
+    "references": [
+        {"path": "../../remote/impl/tsconfig.node.json"}
+    ],
     "files": [],
     "include": [
         "**/*",

@@ -8,14 +8,10 @@ import { EventTargetLike } from '../../../shared/event-target-like';
 import { createEventTargetHandle } from './create-event-target-handle';
 
 export async function createEventTargetHandleFactory(page: Page): Promise<EventTargetHandleFactory> {
-    const moduleHandle = await page.evaluateHandle(`
-(function(){
-    const source = 'const foo = 9; export default foo;';
-    const blob = new Blob([source], {type: 'text/javascript'});
-    const url = URL.createObjectURL(blob);
-    return import(url);
-})();
-        `) as JSHandle<{default: RemoteEventTargetHandleFactory}>;
+    const objectUrl = await page.evaluate((code) => {
+        return URL.createObjectURL(new Blob([code], {type: 'text/javascript'}))
+    }, REMOTE_CODE);
+    const moduleHandle = await page.evaluateHandle(`import('${objectUrl}')`) as JSHandle<{default: RemoteEventTargetHandleFactory}>;
     const factory = await moduleHandle.evaluateHandle(m => m.default);
     const connectionDataRepository = createConnectionDataRepository();
     const connectionEventMessages = await getConnectionEventMessages(page);
