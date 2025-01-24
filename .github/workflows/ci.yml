@@ -25,3 +25,5 @@ jobs:
             -  run: pnpm build
             -  run: pnpm check-types
             -  run: pnpm test
+               env:
+                CHROME_DEVEL_SANDBOX: /opt/google/chrome/chrome-sandbox
