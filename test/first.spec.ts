@@ -27,7 +27,7 @@ describe('an event target handle', () => {
     }>
 
     beforeAll(async () => {
-        browser = await launch();
+        browser = await launch({args: ['--no-sandbox']});
         page = await browser.newPage();
         await page.goto('http://127.0.0.1:8000/');
         const eventTargetHandleFactory = await createEventTargetHandleFactory(page);
