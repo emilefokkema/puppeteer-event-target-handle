@@ -3,21 +3,22 @@ import { EventTargetHandle, ExtendedSerializedMap } from '../../api/event-target
 import { EventTargetHandle as RemoteEventTargetHandle } from '../../../remote/api/event-target-handle'
 import { ChartMap } from '../../../shared/serializable-types'
 import { TargetEventListener } from './target-event-listener'
-import { Connection } from './connection'
+import { EventSource } from './events/event-source'
+import { EventMessage } from '../../../shared/messages'
 
 type ListenerMap<TMap, TSerializedMap> = {[key in (keyof TSerializedMap & keyof TMap)]: TargetEventListener<TSerializedMap[key], key>};
 
 
 function create<TMap, TSerializedMap>(
-    connection: Connection,
+    eventMessages: EventSource<EventMessage>,
     runtimeEventTargetHandle: JSHandle<RemoteEventTargetHandle<TMap>>,
     listeners: ListenerMap<TMap, TSerializedMap>
 ): EventTargetHandle<TMap, TSerializedMap>{
-    return new EventTargetHandleImpl(connection, runtimeEventTargetHandle, listeners)
+    return new EventTargetHandleImpl(eventMessages, runtimeEventTargetHandle, listeners)
 }
 export class EventTargetHandleImpl<TMap, TSerializedMap> implements EventTargetHandle<TMap, TSerializedMap>{
     public constructor(
-        private readonly connection: Connection,
+        private readonly eventMessages: EventSource<EventMessage>,
         private readonly runtimeEventTargetHandle: JSHandle<RemoteEventTargetHandle<TMap>>,
         private readonly listeners: ListenerMap<TMap, TSerializedMap>
     ){}
@@ -38,17 +39,16 @@ export class EventTargetHandleImpl<TMap, TSerializedMap> implements EventTargetH
     public async emitEvents<TChartMap extends ChartMap<TMap>>(
         map: TChartMap
     ): Promise<EventTargetHandle<TMap, ExtendedSerializedMap<TMap, TSerializedMap, TChartMap>>>{
-        const eventMessages = this.connection.getEventMessages();
         await this.runtimeEventTargetHandle.evaluate((t, map) => t.emitEvents(map as ChartMap<TMap>), map);
         const addedListeners: {
             [type in keyof TChartMap]?: TargetEventListener<unknown, type>
         } = {};
         for(const type in map){
-            const listener = new TargetEventListener(eventMessages, type);
+            const listener = new TargetEventListener(this.eventMessages, type);
             addedListeners[type] = listener;
         }
         const newListeners = {...this.listeners, ...addedListeners} as ListenerMap<TMap, ExtendedSerializedMap<TMap, TSerializedMap, TChartMap>>
-        return create(this.connection, this.runtimeEventTargetHandle, newListeners)
+        return create(this.eventMessages, this.runtimeEventTargetHandle, newListeners)
     }
 
     public switchToCapture(type: keyof TMap & keyof TSerializedMap): Promise<void> {

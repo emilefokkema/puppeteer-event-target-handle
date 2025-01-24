@@ -3,11 +3,10 @@ import { EventTargetLike } from '../../../shared/event-target-like'
 import { EventTargetHandle } from '../../api/event-target-handle'
 import { EventTargetHandleFactory } from '../../../remote/api/event-target-handle-factory'
 import { ConnectionDataRepository } from './connection-data-repository'
-
 import { EventSource } from './events/event-source'
 import { ConnectionEventMessage } from '../../../shared/messages'
-import { ExposedFunctionConnection } from './exposed-function-connection'
 import { EventTargetHandleImpl } from './event-target-handle-impl'
+import { getEventMessages } from './get-event-messages'
 
 export async function createEventTargetHandle<TMap>(
     factoryHandle: JSHandle<EventTargetHandleFactory>,
@@ -21,12 +20,12 @@ export async function createEventTargetHandle<TMap>(
             target,
             connectionData
         );
-        const connection = new ExposedFunctionConnection(
+        const eventMessages = getEventMessages(
             connectionEventMessages,
             connectionData
         )
         return new EventTargetHandleImpl<TMap, {}>(
-            connection,
+            eventMessages,
             eventTargetHandle,
             {}
         )
