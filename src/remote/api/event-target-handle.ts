@@ -1,4 +1,4 @@
-import { ChartMap } from '../../shared/serializable-types'
+import { ChartMap } from '../../shared/api/serializable-types'
 
 export interface EventTargetHandle<TMap> {
     emitEvents(map: ChartMap<TMap>): void

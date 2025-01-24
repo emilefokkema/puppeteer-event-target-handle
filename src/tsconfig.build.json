@@ -9,7 +9,7 @@
     },
     "include": [
         "local/api/**/*",
-        "shared/**/*"
+        "shared/api/**/*"
     ],
     "exclude": ["**/dist/**/*"]
 }

@@ -1,5 +1,5 @@
-import { ChartMap, SerializablePropertyChart, SerializedValue } from '../../shared/serializable-types'
-import { EventTargetLike } from '../../shared/event-target-like'
+import { ChartMap, SerializablePropertyChart, SerializedValue } from '../../shared/api/serializable-types'
+import { EventTargetLike } from '../../shared/api/event-target-like'
 
 export type ExtendedSerializedMap<
     TMap,

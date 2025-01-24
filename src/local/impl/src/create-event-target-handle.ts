@@ -1,5 +1,5 @@
 import { JSHandle } from 'puppeteer'
-import { EventTargetLike } from '../../../shared/event-target-like'
+import { EventTargetLike } from '../../../shared/api/event-target-like'
 import { EventTargetHandle } from '../../api/event-target-handle'
 import { EventTargetHandleFactory } from '../../../remote/api/event-target-handle-factory'
 import { ConnectionDataRepository } from './connection-data-repository'

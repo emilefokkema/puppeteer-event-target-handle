@@ -1,7 +1,7 @@
 import { JSHandle } from 'puppeteer'
 import { EventTargetHandle, ExtendedSerializedMap } from '../../api/event-target-handle'
 import { EventTargetHandle as RemoteEventTargetHandle } from '../../../remote/api/event-target-handle'
-import { ChartMap } from '../../../shared/serializable-types'
+import { ChartMap } from '../../../shared/api/serializable-types'
 import { TargetEventListener } from './target-event-listener'
 import { EventSource } from './events/event-source'
 import { EventMessage } from '../../../shared/messages'

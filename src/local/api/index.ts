@@ -5,6 +5,6 @@ declare const createEventTargetHandleFactory: (page: Page) => Promise<EventTarge
 
 export { createEventTargetHandleFactory };
 export { EventTargetHandleFactory }
-export { EventTargetLike } from '../../shared/event-target-like'
+export { EventTargetLike } from '../../shared/api/event-target-like'
 export { EventTargetHandle } from "./event-target-handle";
-export { ChartMap, SerializablePropertyChart, SerializedValue } from '../../shared/serializable-types'
+export { ChartMap, SerializablePropertyChart, SerializedValue } from '../../shared/api/serializable-types'
