@@ -8,7 +8,7 @@ export class ExposedFunctionConnection implements Connection {
     public constructor(connectionData: ConnectionData){
         this.messageTarget = {
             send(message: EventMessage): void{
-                window.runtimeEventTargetSendEvent({
+                window.eventTargetHandleSendEvent({
                     connectionId: connectionData.id,
                     message
                 })
