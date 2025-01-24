@@ -21,7 +21,8 @@
     "remote:build": "vite build --config src/remote/impl/vite.config.ts",
     "types:build": "tsc --project src/tsconfig.build.json",
     "local:build": "vite build --config src/local/impl/vite.config.ts",
-    "build": "pnpm remote:build && pnpm types:build && pnpm local:build"
+    "build": "pnpm remote:build && pnpm types:build && pnpm local:build",
+    "test-page:start": "vite-node test/page/start.ts"
   },
   "repository": {
     "type": "git",
@@ -38,10 +39,14 @@
   },
   "homepage": "https://github.com/emilefokkema/puppeteer-event-target-handle#readme",
   "devDependencies": {
+    "@types/express": "^5.0.0",
     "@types/node": "^22.10.5",
+    "express": "^4.21.2",
     "puppeteer": "^23.11.1",
+    "rxjs": "^7.8.1",
     "typescript": "^5.7.3",
     "vite": "^6.0.11",
+    "vite-node": "^3.0.4",
     "vitest": "^3.0.3"
   },
   "peerDependencies": {

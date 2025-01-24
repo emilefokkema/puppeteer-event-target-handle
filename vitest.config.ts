@@ -5,6 +5,7 @@ export default defineConfig({
       include: ['test/**/*.spec.ts'],
       hookTimeout: 120000,
       testTimeout: 120000,
-      reporters: ['dot']
+      reporters: ['dot'],
+      globalSetup: ['./test/globalSetup.ts']
     }
   })

@@ -5,5 +5,9 @@
         "types": [],
     },
     "files": [],
-    "include": ["**/*"]
+    "references": [
+        {"path": "./page"}
+    ],
+    "include": ["**/*"],
+    "exclude": ["page/**/*", "dist"]
 }
