@@ -6,7 +6,7 @@
         "target": "ESNext",
         "composite": true,
         "emitDeclarationOnly": true,
-        "outDir": "dist-dev"
+        "outDir": "dist-types"
     },
     "files": [
         "vitest.config.ts"

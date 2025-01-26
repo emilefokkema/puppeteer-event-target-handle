@@ -5,11 +5,16 @@
         "target": "ESNext",
         "composite": true,
         "emitDeclarationOnly": true,
-        "outDir": "./dist",
-        "lib": ["DOM"]
+        "outDir": "../../../dist-types/remote/api",
+        "lib": ["DOM"],
+        "paths": {
+            "shared/api/*": ["../../shared/api/*"],
+            "shared/*": ["../../shared/*"]
+        }
     },
     "references": [
-        {"path": "../../shared"}
+        {"path": "../../shared"},
+        {"path": "../../shared/api"},
     ],
     "include": ["**/*"]
 }

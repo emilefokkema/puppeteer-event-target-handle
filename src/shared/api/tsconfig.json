@@ -1,12 +1,12 @@
 {
-    "extends": "../tsconfig.build.json",
+    "extends": "../../tsconfig.build.json",
     "compilerOptions": {
         "rootDir": ".",
-        "outDir": "../../dist-types/shared",
+        "outDir": "../../../dist-types/shared/api",
         "composite": true
     },
     "include": [
         "**/*"
     ],
-    "exclude": ["dist", "api"]
+    "exclude": ["dist"]
 }

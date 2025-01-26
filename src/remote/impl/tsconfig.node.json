@@ -1,7 +1,7 @@
 {
     "extends": "../../../tsconfig.dev.json",
     "compilerOptions": {
-        "outDir": "dist-types",
+        "outDir": "../../../dist-types/remote/impl",
 
     },
     "files": [],

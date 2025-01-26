@@ -6,7 +6,7 @@
         "target": "ESNext",
         "composite": true,
         "emitDeclarationOnly": true,
-        "outDir": "dist-types",
+        "outDir": "../../../dist-types/remote/impl/src",
         "skipLibCheck": true,
         "esModuleInterop": true,
         "verbatimModuleSyntax": true,
@@ -17,6 +17,11 @@
             "DOM",
             "DOM.Iterable"
         ],
+        "paths": {
+            "shared/api/*": ["../../shared/api/*"],
+            "shared/*": ["../../shared/*"],
+            "api/*": ["../api/*"]
+        }
     },
     "references": [
         {"path": "../api"},

@@ -4,7 +4,7 @@
         "moduleResolution": "bundler",
         "target": "ESNext",
         "composite": true,
-        "outDir": "./dist",
+        "outDir": "../../../dist-types/local/impl/src",
         "emitDeclarationOnly": true
     },
     "references": [

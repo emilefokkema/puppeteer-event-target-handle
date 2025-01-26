@@ -1,7 +1,7 @@
 {
     "extends": "../../../tsconfig.dev.json",
     "compilerOptions": {
-        "outDir": "dist",
+        "outDir": "../../../dist-types/local/impl",
     },
     "references": [
         {"path": "../../remote/impl/tsconfig.node.json"}

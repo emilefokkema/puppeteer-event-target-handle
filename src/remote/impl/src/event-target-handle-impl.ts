@@ -1,7 +1,7 @@
-import type { EventTargetLike } from '../../../shared/api/event-target-like';
-import type { EventMessage } from '../../../shared/messages';
-import type { ChartMap, SerializablePropertyChart } from '../../../shared/api/serializable-types';
-import type { EventTargetHandle } from '../../api/event-target-handle';
+import type { EventTargetLike } from 'shared/api/event-target-like';
+import type { EventMessage } from 'shared/messages';
+import type { ChartMap, SerializablePropertyChart } from 'shared/api/serializable-types';
+import type { EventTargetHandle } from 'api/event-target-handle';
 import type { MessageTarget } from './message-target';
 import { serializeEvent } from './serialize-event';
 

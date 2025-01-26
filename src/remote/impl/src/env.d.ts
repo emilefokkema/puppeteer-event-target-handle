@@ -1,5 +1,5 @@
-import { sendEventFunctionName } from '../../../shared/constants'
-import { ConnectionEventMessage } from '../../../shared/messages'
+import { sendEventFunctionName } from 'shared/constants'
+import { ConnectionEventMessage } from 'shared/messages'
 
 declare global {
     interface Window {

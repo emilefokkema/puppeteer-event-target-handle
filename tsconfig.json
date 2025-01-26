@@ -1,10 +1,8 @@
 {
     "files": [],
     "references": [
-        {"path": "./src/remote/api"},
         {"path": "./src/remote/impl"},
         {"path": "./src/shared"},
-        {"path": "./src/local/api"},
         {"path": "./src/local/impl"},
         {"path": "./tsconfig.dev.json"},
         {"path": "./test"},
