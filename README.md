@@ -2,6 +2,9 @@
 
 This package makes DOM events available to Puppeteer.
 
+> [!NOTE]  
+> A [proposal](https://github.com/puppeteer/puppeteer/issues/13561) exists to make (some form of) the functionality in this package a part of Puppeteer itself.
+
 ## I mean, what problem does it solve?
 
 Sometimes, when using [Puppeteer](https://pptr.dev/), one would like to interact with DOM events. For example, suppose we have a `JSHandle` for a button element. This button emits `'click'` events. Now, if we wanted to access those events in the context of Puppeteer, we would have to do something like
